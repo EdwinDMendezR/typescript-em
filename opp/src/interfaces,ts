@@ -1,0 +1,41 @@
+export {}
+
+interface Parametros {
+    variablea: string;
+    variableb: string;
+}
+
+interface ParametrosOpcionales {
+    readonly variablec: number;
+    variabled: number;
+}
+
+let params : ParametrosOpcionales;
+
+function metodo(parametros : {variablea: string, variableb: string}) {
+    console.log("***")
+}
+
+function metodoDos(parametros : Parametros) {
+    console.log("***")
+}
+
+let objecto = {
+    variablea: 'A',
+    variableb: 'B'
+}
+
+metodo(objecto);
+metodoDos(objecto);
+
+
+metodo({
+    variablea: 'A',
+    variableb: 'B'
+});
+
+
+metodoDos({
+    variablea: 'A',
+    variableb: 'B'
+});
